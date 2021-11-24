@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<head>
+	<link rel="icon" type="image/ico" href="images/icons/popup.ico"/>
+	<link rel="stylesheet" type="text/css" href="styles/popup.css"/>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="author" content="Maria Margaryan"/>
+	<meta name="contact" content="maria.17.01@mail.ru"/>
+	<meta name="copyright" content="Ogma Inc."/>
+	<meta name="description" content="Pop-ups are small windows that ‘pop up’ over the top of web pages in your internet browser."/>
+	<meta name="expires" content="0"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="keywords" content="window, display, tip, emergent, show, browser, click"/>
+	<script type="text/javascript" src="scripts/popup.js" defer="defer"></script>
+	<title>Popup</title>
+</head>
+<body>
+		<div id="Overlay" class="overlay"></div>
+		<button id="Btn" class="btn" onclick="openPopup(), changeSize(), changeColor(), changeOpacity()">Click here!</button>
+		<div id="Popup" class="popup">
+			<div id="PopupContent" class="popup-content">
+				<div class='resizers'>
+					<div class='resizer top-left'></div>
+					<div class='resizer top-right'></div>
+					<div class='resizer bottom-left'></div>
+					<div class='resizer bottom-right'></div>
+				</div>
+				<div id="PopupHeader" class="popup-header">
+						<h1 id="Header" name="header" class="titleText" value="Popup"></h1>
+						<button id="CloseBtn" class="close" onclick="closePopup()">&times;</button>
+				</div>
+				<div class="popup-body">
+					<textarea id="Message" name="textarea" class="textarea" rows="5" cols="30" onfocus="this.value=''">Write something here...</textarea>
+				</div>
+			</div>
+		</div>
+	<div class ="container">
+		<div class="settings">
+			<div>
+				<span>Title color:</span>
+				<input type="color" id="TitleColor" class="title-color" value="#d28ec2"/>
+			</div>
+			<div class="space"></div>
+			<div>
+				<span>Title text color:</span>
+				<input type="color" id="TitleTextColor" class="title-text-color" value="#45715a"/>
+			</div>
+			<div class="space"></div>
+			<div>
+				<span>Body color:</span>
+				<input type="color" id="BodyColor" class="body-color" value="#e6fff2"/>
+			</div>
+			<div class="space"></div>
+			<div>
+				<span>Body text color:</span>
+				<input type="color" id="BodyTextColor" class="body-text-color" value="#000000"/>
+			</div>
+			<div class="space"></div>
+			<div>
+				<span>Dialog title:</span>
+				<input type="text" id="DialogTitle" class="dialog-title" value="Popup"/>
+			</div>
+			<div class="space"></div>
+			<div>
+				<span>Width(px):</span>
+				<input type="number" id ="Width" class="width" max="1500" value="300"/>
+			</div>
+			<div class="space"></div>
+			<div>
+				<span>Height(px):</span>
+				<input type="number" id="Height" class="height" max="700" value="200"/>
+			</div>
+			<div class="space"></div>
+			<div>
+				<span>Dim layer color:</span>
+				<input type="color" id="DimLayerColor" class="dim-layer-color" value="#938392"/>
+			</div>
+			<div class="space"></div>
+			<div>
+				<span>Dim layer opacity:</span>
+				<input type="range" id="DimLayerOpacity" class="dim-layer-color" min="0" max="1" step="0.1" value="0.5"/>
+			</div>
+			<div class="space"></div>
+			<div class="resizableLeft">Resizable:</div>
+			<div class="resizable">
+				<label class="checkbox-container">
+					<input type="checkbox" class="resizable" checked="checked"/>
+					<span class="checkmark"></span>
+				</label>
+			</div>
+			<div class="space"></div>
+			<div class="resizableLeft">Modal:</div>
+			<div class="modal">
+				<label class="checkbox-container">
+					<input type="checkbox" class="modal" checked="checked"/>
+					<span class="checkmark"></span>
+				</label>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<p>© 2021 Popup. All rights reserved.</p>
+	</footer>
+</body>
+</html>
